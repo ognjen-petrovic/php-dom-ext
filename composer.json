@@ -1,0 +1,16 @@
+{
+    "name": "ogpe/php-dom-ext",
+    "description": "PHP DOM extension powered by PHP-CPP and pugixml",
+    "type": "extension",
+    "require-dev": {
+        "phpunit/phpunit": "^5.6"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ognjen Petrovic",
+            "email": "ognjen.petrovic2@gmail.com"
+        }
+    ],
+    "require": {}
+}
