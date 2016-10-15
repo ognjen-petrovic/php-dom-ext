@@ -149,3 +149,6 @@ install:
 clean:
 						${RM} ${EXTENSION} ${OBJECTS}
 
+
+test:
+						../vendor/bin/phpunit ../tests
