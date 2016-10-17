@@ -151,4 +151,4 @@ clean:
 
 
 test:
-						../vendor/bin/phpunit ../tests
+						../vendor/bin/phpunit --bootstrap ../tests/bootstrap.php ../tests

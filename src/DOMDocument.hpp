@@ -5,15 +5,19 @@
 #ifndef DOMDOCUMENT_H
 #define DOMDOCUMENT_H
 
-class DOMDocument : public DOMNode
+class DOMDocument : public Php::Base, public pugi::xml_document
 {
-    	
+	private:
+		pugi::xml_parse_result parse_result;
 	public:
 	    /**
 	     *  C++ constructor and destructor
 	     */
 	    DOMDocument() = default;
 	    virtual ~DOMDocument() = default;
+	    
+	    Php::Value load(Php::Parameters &params);
+	    Php::Value getElementById(Php::Parameters &params);
 
 };
 #endif
