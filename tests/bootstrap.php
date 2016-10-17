@@ -1,0 +1,4 @@
+<?php
+define('EXT_NAMESPACE', 'ogpe');
+define('DOMNODE_CLASS', EXT_NAMESPACE . '\DOMNode');
+define('TEST_ASSET_FOLDER', __DIR__ . DIRECTORY_SEPARATOR . 'asset' . DIRECTORY_SEPARATOR);
