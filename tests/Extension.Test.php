@@ -3,6 +3,7 @@
 use PHPUnit\Framework\TestCase;
 use ogpe\DOMnode;
 use ogpe\DOMDocument;
+use ogpe\HTMLFormElement;
 
 class ExtensionTest extends TestCase
 {
@@ -13,13 +14,22 @@ class ExtensionTest extends TestCase
 
 	public function testDOMNodeClassExist()
 	{	
-		$this->assertTrue(class_exists('DOMNode'));
+		$this->assertTrue(class_exists('ogpe\DOMNode'));
 		$this->assertEquals('ogpe\DOMNode', get_class(new DOMNode));
 	}
 
 	public function testDOMDocumentClassExist()
 	{	
-		$this->assertTrue(class_exists('DOMDocument'));
-		$this->assertEquals('ogpe\DOMDocument', get_class(new DOMDocument));
+		$this->assertTrue(class_exists(DOMDOCUMENT_CLASS));
+		$this->assertEquals(DOMDOCUMENT_CLASS, get_class(new DOMDocument));
 	}
+
+	public function testHTMLFormElementClassExist()
+	{	
+		//echo PHP_EOL, get_class(new HTMLFormElement), PHP_EOL;
+		//exit;
+		$this->assertTrue(class_exists(HTMLFORMELEMENT_CLASS));
+		$this->assertEquals(HTMLFORMELEMENT_CLASS, get_class(new HTMLFormElement));
+	}
+
 }

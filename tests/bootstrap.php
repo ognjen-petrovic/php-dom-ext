@@ -1,4 +1,6 @@
 <?php
 define('EXT_NAMESPACE', 'ogpe');
 define('DOMNODE_CLASS', EXT_NAMESPACE . '\DOMNode');
+define('DOMDOCUMENT_CLASS', EXT_NAMESPACE . '\DOMDocument');
+define('HTMLFORMELEMENT_CLASS', EXT_NAMESPACE . '\HTMLFormElement');
 define('TEST_ASSET_FOLDER', __DIR__ . DIRECTORY_SEPARATOR . 'asset' . DIRECTORY_SEPARATOR);
