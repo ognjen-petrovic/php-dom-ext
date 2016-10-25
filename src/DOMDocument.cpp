@@ -1,5 +1,6 @@
 #include "DOMDocument.hpp"
 #include "walkers.hpp"
+#include "node_factory.hpp"
 
 
 Php::Value DOMDocument::load(Php::Parameters &params) {
@@ -15,11 +16,13 @@ Php::Value DOMDocument::getElementById(Php::Parameters &params)
 	walker_by_id walker;
     walker.value = (pugi::char_t*)params[0].stringValue().c_str();
     traverse(walker);
-    if (walker.result_node.empty()) {
+    if (walker.result_node.empty())
+    {
         return nullptr;
     }
-    else {
-        return Php::Object("ogpe\\DOMNode", new DOMNode(walker.result_node));
+    else
+    {
+        return node_factory(walker.result_node);
     }
 
 }

@@ -1,6 +1,7 @@
 #include <phpcpp.h>
 #include "DOMDocument.hpp"
 #include "DOMNode.hpp"
+#include "HTMLFormElement.hpp"
 
 extern "C" {
     
@@ -14,10 +15,13 @@ extern "C" {
         DOMDocument.method<&DOMDocument::load> ("load");
         DOMDocument.method<&DOMDocument::getElementById> ("getElementById");
 
+        Php::Class<HTMLFormElement> HTMLFormElement("HTMLFormElement");
+
         DOMDocument.extends(DOMNode);
 
         myNamespace.add(std::move(DOMNode));
         myNamespace.add(std::move(DOMDocument));
+        myNamespace.add(std::move(HTMLFormElement));
 
         myExtension.add(std::move(myNamespace));
         return myExtension;

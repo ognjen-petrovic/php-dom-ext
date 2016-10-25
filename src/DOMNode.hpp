@@ -6,12 +6,9 @@
 
 class DOMNode : public Php::Base
 {
-	private:
+	protected:
     	pugi::xml_node _node;
 	public:
-	    /**
-	     *  C++ constructor and destructor
-	     */
 	    DOMNode() = default;
 	    DOMNode(pugi::xml_node n);
 	    virtual ~DOMNode() = default;

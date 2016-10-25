@@ -10,9 +10,6 @@ class DOMDocument : public Php::Base, public pugi::xml_document
 	private:
 		pugi::xml_parse_result parse_result;
 	public:
-	    /**
-	     *  C++ constructor and destructor
-	     */
 	    DOMDocument() = default;
 	    virtual ~DOMDocument() = default;
 	    
